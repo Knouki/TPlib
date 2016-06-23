@@ -258,5 +258,38 @@ class Customer
     {
         return $this->mail;
     }
-}
 
+    /**
+     * Add order
+     *
+     * @param \SandraBundle\Entity\Orderr $order
+     *
+     * @return Customer
+     */
+    public function addOrder(\SandraBundle\Entity\Orderr $order)
+    {
+        $this->orders[] = $order;
+
+        return $this;
+    }
+
+    /**
+     * Remove order
+     *
+     * @param \SandraBundle\Entity\Orderr $order
+     */
+    public function removeOrder(\SandraBundle\Entity\Orderr $order)
+    {
+        $this->orders->removeElement($order);
+    }
+
+    /**
+     * Get orders
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getOrders()
+    {
+        return $this->orders;
+    }
+}

@@ -134,5 +134,38 @@ class Product
     {
         return $this->price;
     }
-}
 
+    /**
+     * Add orderDetail
+     *
+     * @param \SandraBundle\Entity\OrderDetail $orderDetail
+     *
+     * @return Product
+     */
+    public function addOrderDetail(\SandraBundle\Entity\OrderDetail $orderDetail)
+    {
+        $this->orderDetails[] = $orderDetail;
+
+        return $this;
+    }
+
+    /**
+     * Remove orderDetail
+     *
+     * @param \SandraBundle\Entity\OrderDetail $orderDetail
+     */
+    public function removeOrderDetail(\SandraBundle\Entity\OrderDetail $orderDetail)
+    {
+        $this->orderDetails->removeElement($orderDetail);
+    }
+
+    /**
+     * Get orderDetails
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getOrderDetails()
+    {
+        return $this->orderDetails;
+    }
+}

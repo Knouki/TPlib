@@ -103,5 +103,38 @@ class Invoice
     {
         return $this->dateInvoice;
     }
-}
 
+    /**
+     * Add delivery
+     *
+     * @param \SandraBundle\Entity\Delivery $delivery
+     *
+     * @return Invoice
+     */
+    public function addDelivery(\SandraBundle\Entity\Delivery $delivery)
+    {
+        $this->deliveries[] = $delivery;
+
+        return $this;
+    }
+
+    /**
+     * Remove delivery
+     *
+     * @param \SandraBundle\Entity\Delivery $delivery
+     */
+    public function removeDelivery(\SandraBundle\Entity\Delivery $delivery)
+    {
+        $this->deliveries->removeElement($delivery);
+    }
+
+    /**
+     * Get deliveries
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getDeliveries()
+    {
+        return $this->deliveries;
+    }
+}

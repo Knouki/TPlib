@@ -75,5 +75,52 @@ class OrderDetail
     {
         return $this->qty;
     }
-}
 
+    /**
+     * Set product
+     *
+     * @param \SandraBundle\Entity\Product $product
+     *
+     * @return OrderDetail
+     */
+    public function setProduct(\SandraBundle\Entity\Product $product = null)
+    {
+        $this->product = $product;
+
+        return $this;
+    }
+
+    /**
+     * Get product
+     *
+     * @return \SandraBundle\Entity\Product
+     */
+    public function getProduct()
+    {
+        return $this->product;
+    }
+
+    /**
+     * Set order
+     *
+     * @param \SandraBundle\Entity\Orderr $order
+     *
+     * @return OrderDetail
+     */
+    public function setOrder(\SandraBundle\Entity\Orderr $order = null)
+    {
+        $this->order = $order;
+
+        return $this;
+    }
+
+    /**
+     * Get order
+     *
+     * @return \SandraBundle\Entity\Orderr
+     */
+    public function getOrder()
+    {
+        return $this->order;
+    }
+}

@@ -106,5 +106,52 @@ class Delivery
     {
         return $this->dateDelivery;
     }
-}
 
+    /**
+     * Set order
+     *
+     * @param \SandraBundle\Entity\Orderr $order
+     *
+     * @return Delivery
+     */
+    public function setOrder(\SandraBundle\Entity\Orderr $order = null)
+    {
+        $this->order = $order;
+
+        return $this;
+    }
+
+    /**
+     * Get order
+     *
+     * @return \SandraBundle\Entity\Orderr
+     */
+    public function getOrder()
+    {
+        return $this->order;
+    }
+
+    /**
+     * Set invoice
+     *
+     * @param \SandraBundle\Entity\Invoice $invoice
+     *
+     * @return Delivery
+     */
+    public function setInvoice(\SandraBundle\Entity\Invoice $invoice = null)
+    {
+        $this->invoice = $invoice;
+
+        return $this;
+    }
+
+    /**
+     * Get invoice
+     *
+     * @return \SandraBundle\Entity\Invoice
+     */
+    public function getInvoice()
+    {
+        return $this->invoice;
+    }
+}

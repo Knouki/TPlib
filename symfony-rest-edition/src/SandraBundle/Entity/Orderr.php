@@ -118,5 +118,96 @@ class Orderr
     {
         return $this->dateCreated;
     }
-}
 
+    /**
+     * Add orderDetail
+     *
+     * @param \SandraBundle\Entity\OrderDetail $orderDetail
+     *
+     * @return Orderr
+     */
+    public function addOrderDetail(\SandraBundle\Entity\OrderDetail $orderDetail)
+    {
+        $this->orderDetails[] = $orderDetail;
+
+        return $this;
+    }
+
+    /**
+     * Remove orderDetail
+     *
+     * @param \SandraBundle\Entity\OrderDetail $orderDetail
+     */
+    public function removeOrderDetail(\SandraBundle\Entity\OrderDetail $orderDetail)
+    {
+        $this->orderDetails->removeElement($orderDetail);
+    }
+
+    /**
+     * Get orderDetails
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getOrderDetails()
+    {
+        return $this->orderDetails;
+    }
+
+    /**
+     * Set customer
+     *
+     * @param \SandraBundle\Entity\Customer $customer
+     *
+     * @return Orderr
+     */
+    public function setCustomer(\SandraBundle\Entity\Customer $customer = null)
+    {
+        $this->customer = $customer;
+
+        return $this;
+    }
+
+    /**
+     * Get customer
+     *
+     * @return \SandraBundle\Entity\Customer
+     */
+    public function getCustomer()
+    {
+        return $this->customer;
+    }
+
+    /**
+     * Add delivery
+     *
+     * @param \SandraBundle\Entity\Delivery $delivery
+     *
+     * @return Orderr
+     */
+    public function addDelivery(\SandraBundle\Entity\Delivery $delivery)
+    {
+        $this->deliveries[] = $delivery;
+
+        return $this;
+    }
+
+    /**
+     * Remove delivery
+     *
+     * @param \SandraBundle\Entity\Delivery $delivery
+     */
+    public function removeDelivery(\SandraBundle\Entity\Delivery $delivery)
+    {
+        $this->deliveries->removeElement($delivery);
+    }
+
+    /**
+     * Get deliveries
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getDeliveries()
+    {
+        return $this->deliveries;
+    }
+}

@@ -2,24 +2,35 @@
 
 namespace SandraBundle\Controller;
 
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use SandraBundle\Entity\Customer;
-use SandraBundle\Form\CustomerType;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 
 /**
  * Customer controller.
  */
 class CustomerRestController extends Controller
 {
-    public function getUsersAction(){
+    /**
+     * @ApiDoc(
+     *  description="Returns a list of customers"
+     * )
+     */
+    public function getCustomersAction(){
         $user = $this->getDoctrine()->getRepository('SandraBundle:Customer')->findAll();
-        if(!is_object($user)){
-            throw $this->createNotFoundException();
-        }
+
+        return $user;
+    }
+
+    /**
+     * @ApiDoc(
+     *  description="Returns a customer by his id",
+     * )
+     *
+     * @param $id
+     * @return object
+     */
+    public function getCustomerAction($id){
+        $user = $this->getDoctrine()->getRepository('SandraBundle:Customer')->find($id);
 
         return $user;
     }
