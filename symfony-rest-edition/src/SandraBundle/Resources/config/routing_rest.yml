@@ -1,0 +1,24 @@
+products :
+  type: rest
+  resource:     "SandraBundle:ProductRest"
+  name_prefix:  api_
+orderdetails :
+  type: rest
+  resource:     "SandraBundle:OrderDetailRest"
+  name_prefix:  api_
+orderrs :
+  type: rest
+  resource:     "SandraBundle:OrderrRest"
+  name_prefix:  api_
+customers :
+  type: rest
+  resource:     "SandraBundle:CustomerRest"
+  name_prefix:  api_
+deliveries :
+  type: rest
+  resource:     "SandraBundle:DeliveryRest"
+  name_prefix:  api_
+invoices :
+  type: rest
+  resource:     "SandraBundle:InvoiceRest"
+  name_prefix:  api_

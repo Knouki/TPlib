@@ -1,0 +1,18 @@
+Rest_Customer :
+  type : rest
+  resource: "@SandraBundle/Resources/config/routing_rest.yml"
+Rest_Orderr :
+  type : rest
+  resource: "@SandraBundle/Resources/config/routing_rest.yml"
+Rest_Product :
+  type : rest
+  resource: "@SandraBundle/Resources/config/routing_rest.yml"
+Rest_OrderDetail :
+  type : rest
+  resource: "@SandraBundle/Resources/config/routing_rest.yml"
+Rest_Delivery :
+  type : rest
+  resource: "@SandraBundle/Resources/config/routing_rest.yml"
+Rest_Invoice :
+  type : rest
+  resource: "@SandraBundle/Resources/config/routing_rest.yml"

@@ -26,7 +26,8 @@
         "willdurand/rest-extra-bundle": "^1.0"
     },
     "require-dev": {
-        "sensio/generator-bundle": "~2.3"
+        "sensio/generator-bundle": "~2.3",
+        "doctrine/doctrine-fixtures-bundle": "^2.3"
     },
     "scripts": {
         "post-install-cmd": [
