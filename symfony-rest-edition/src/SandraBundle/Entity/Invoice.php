@@ -33,7 +33,7 @@ class Invoice
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dateInvoice", type="datetimetz")
+     * @ORM\Column(name="dateInvoice", type="datetime")
      */
     private $dateInvoice;
     

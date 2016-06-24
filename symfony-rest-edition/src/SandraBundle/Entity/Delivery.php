@@ -33,7 +33,7 @@ class Delivery
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dateDelivery", type="datetimetz")
+     * @ORM\Column(name="dateDelivery", type="datetime")
      */
     private $dateDelivery;
 

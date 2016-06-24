@@ -35,7 +35,7 @@ class Orderr
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dateCreated", type="datetimetz")
+     * @ORM\Column(name="dateCreated", type="datetime")
      */
     private $dateCreated;
 
