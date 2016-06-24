@@ -28,7 +28,7 @@ class Orderr
     /**
      * @var string
      *
-     * @ORM\Column(name="ref", type="string", length=255)
+     * @ORM\Column(name="ref", type="string", length=10)
      */
     private $ref;
 
